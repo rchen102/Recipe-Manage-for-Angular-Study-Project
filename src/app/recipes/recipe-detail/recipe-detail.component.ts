@@ -12,12 +12,12 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-	recipe: Recipe;
+  recipe: Recipe;
   id: number;
 
-  constructor(private recipeService: RecipeService, 
+  constructor(private recipeService: RecipeService,
               private route: ActivatedRoute,
-              private router: Router) { 
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -31,7 +31,7 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onAddToShoppingList() {
-  	this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
   onEditRecipe() {
